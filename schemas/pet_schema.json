@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {"type": "integer"},
+        "name": {"type": "string"},
+        "photo_url": {"type": "string"},
+        "category": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "integer"},
+                "name": {"type": "string"}
+            },
+            "required": ["id", "name"]
+        },
+        "status": {"type": "string"}
+    },
+    "required": ["id", "name", "photo_url", "category", "status"]
+}
