@@ -1,0 +1,7 @@
+CONFIG_DATA_PATH = 'data/config_data.json'
+TEST_DATA_PATH = 'data/test_data.json'
+CATEGORY_LIST_SCHEMA_PATH = 'schemas/category_list_schema.json'
+CATEGORY_SCHEMA_PATH = 'schemas/category_schema.json'
+PET_LIST_SCHEMA_PATH = 'schemas/pet_list_schema.json'
+PET_SCHEMA_PATH = 'schemas/pet_schema.json'
+TOKEN_SCHEMA_PATH = 'schemas/token_schema.json'

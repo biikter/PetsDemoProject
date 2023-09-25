@@ -1,0 +1,8 @@
+URL_KEY = "url"
+USERNAME_KEY = "username"
+PASSWORD_KEY = "password"
+ENDPOINT_CATEGORY_KEY = "endpoint_category"
+ENDPOINT_CATEGORY_BY_ID_KEY = "endpoint_category_by_id"
+ENDPOINT_PET_KEY = "endpoint_pet"
+ENDPOINT_PET_BY_ID_KEY = "endpoint_pet_by_id"
+ENDPOINT_TOKEN_KEY = "endpoint_token"

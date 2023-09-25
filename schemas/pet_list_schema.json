@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "count": {"type": "integer"},
+        "next": {"anyOf":[{"type": "string"}, {"type": "null"}]},
+        "previous": {"anyOf":[{"type": "string"}, {"type": "null"}]},
+        "results": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "integer"},
+                    "name": {"type": "string"},
+                    "photo_url": {"type": "string"},
+                    "category": {
+                        "type": "object",
+                        "properties": {
+                            "id": {"type": "integer"},
+                            "name": {"type": "string"}
+                        },
+                        "required": ["id","name"]
+                    },
+                    "status": {"type": "string", "enum": ["available", "pending", "sold"]}
+                },
+                "required": ["id","name","photo_url","category","status"]
+            }
+        }
+    },
+    "required": ["count", "next", "previous", "results"]
+}

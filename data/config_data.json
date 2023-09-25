@@ -1,9 +1,10 @@
 {
   "url" : "http://91.210.171.73:8080/",
-  "endpoint_categories" : "api/category/",
-  "endpoint_category_by_id" : "api/category/235/",
-  "endpoint_all_pets" : "api/pet/",
-  "endpoint_pet_by_id" : "api/pet/118/",
-  "username": "",
-  "password": ""
+  "username": "admin",
+  "password": "admin",
+  "endpoint_category": "api/category/",
+  "endpoint_category_by_id": "api/category/{}/",
+  "endpoint_pet": "api/pet/",
+  "endpoint_pet_by_id": "api/pet/{}/",
+  "endpoint_token": "api/token/auth/"
 }
