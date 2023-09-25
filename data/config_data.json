@@ -1,7 +1,7 @@
 {
   "url" : "http://91.210.171.73:8080/",
-  "username": "admin",
-  "password": "admin",
+  "username": "",
+  "password": "",
   "endpoint_category": "api/category/",
   "endpoint_category_by_id": "api/category/{}/",
   "endpoint_pet": "api/pet/",
