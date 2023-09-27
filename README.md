@@ -9,12 +9,12 @@
 
 1. Установить зависимости
 
-- Python Framework для pytest (https://docs.pytest.org/en/7.4.x/)
-- Библиотека отчетов pytest-html (https://pytest-html.readthedocs.io/en/latest/) 
-- Библиотека requests (`pip install requests`)
-- Библиотека jsonschema (`pip install jsonschema`)
-- Фреймворк отчетов Yandex Allure (https://github.com/allure-framework)
-- Allure-Pytest adapter (`pip install allure-pytest`)
+    - Python Framework для pytest (https://docs.pytest.org/en/7.4.x/)
+    - Библиотека отчетов pytest-html (https://pytest-html.readthedocs.io/en/latest/) 
+    - Библиотека requests (`pip install requests`)
+    - Библиотека jsonschema (`pip install jsonschema`)
+    - Фреймворк отчетов Yandex Allure (https://github.com/allure-framework)
+    - Allure-Pytest adapter (`pip install allure-pytest`)
 
 2. Клонировать проект (`git clone https://github.com/biikter/PetsDemoProject.git`)
 
