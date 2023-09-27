@@ -16,6 +16,9 @@
 
 **3. Прописать логин и пароль в файле data/config_data.json. Если тестируете сервис, который запущен локально, то заменить url.**
 
-**4. Запустить тест с командной строки** (`pytest --html=report.html --alluredir=allure-results PetsDemoProject.py`)
+**4. Запустить тест с командной строки** 
+```
+pytest --html=report.html --alluredir=allure-results PetsDemoProject.py
+```
 
 
