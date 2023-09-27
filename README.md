@@ -1,20 +1,34 @@
 # PetsDemoProject
-Тестовое задание по REST API
 
-##Запуск проекта:
+Тестовое задание по REST API. Тест-кейсы описаны в файле _тест_кейсы.xlsx_.
 
-###1. Установить зависимости
+В качестве уникальных названий категорий и животных я использовал случайные строки длиной в 10 символов. Они прописаны в файле _test_data.json_.
 
-- Python Framework для pytest (https://docs.pytest.org/en/7.4.x/)
-- Библиотека отчетов pytest-html (https://pytest-html.readthedocs.io/en/latest/) 
-- Библиотека requests ('pip install requests')
-- Библиотека jsonschema ('pip install jsonschema')
-- Фреймворк отчетов Yandex Allure (https://github.com/allure-framework)
-- Allure-Pytest adapter ('pip install allure-pytest')
+Все тесты, кроме одного, стабильно проходят. Нестабильно ведет себя один тест _test_update_category_false_id_ - обновление категории животного по несуществующему id. Этот тест иногда проходит, а иногда нет.
 
-###2. Клонировать проект ('git clone https://github.com/biikter/PetsDemoProject.git')
+**Запуск проекта:**
 
-###3. Прописать логин и пароль в файле data/config_data.json. Если тестируете сервис, который запущен локально, то заменить url.
+1. Установить зависимости
 
-###4. Запустить тест с командной строки ('pytest --html=report.html --alluredir=allure-results PetsDemoProject.py')
+	- Python Framework для pytest (https://docs.pytest.org/en/7.4.x/)
+	- Библиотека отчетов pytest-html (https://pytest-html.readthedocs.io/en/latest/) 
+	- Библиотека requests (`pip install requests`)
+	- Библиотека jsonschema (`pip install jsonschema`)
+	- Фреймворк отчетов Yandex Allure (https://github.com/allure-framework)
+	- Allure-Pytest adapter (`pip install allure-pytest`)
+
+2. Клонировать проект (`git clone https://github.com/biikter/PetsDemoProject.git`)
+
+3. **Прописать логин и пароль в файле data/config_data.json.** Если тестируете сервис, который запущен локально, то заменить url.
+
+4. Запустить тест с командной строки. Набрать в папке проекта: 
+```
+pytest --html=report.html --alluredir=allure-results PetsDemoProject.py
+```
+5. Посмотреть отчет pytest-html -> открыть файл report.html
+
+6. Посмотреть отчет Allure -> набрать в командной строке:
+```
+allure serve allure-results
+```
 
