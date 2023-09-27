@@ -1,8 +1,6 @@
 from utilities.file_utils import FileUtils
 from utilities.api_utils import ApiUtils
-import file_paths
-import config_data_keys
-import json_keys
+from constants import config_data_keys, file_paths, json_keys
 
 
 class ApiRequests:

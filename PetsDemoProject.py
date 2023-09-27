@@ -1,10 +1,8 @@
 import requests
 from utilities.json_utils import JsonUtils
 from utilities.file_utils import FileUtils
-from api_requests import ApiRequests
-import file_paths
-import test_data_keys
-import json_keys
+from utilities.api_requests import ApiRequests
+from constants import file_paths, json_keys, test_data_keys
 
 test_data = FileUtils.read_json(file_paths.TEST_DATA_PATH)
 api_requests = ApiRequests()
@@ -49,7 +47,8 @@ def test_get_category_by_false_id():
 
 
 def test_update_category():
-    response = api_requests.update_category(test_data[test_data_keys.NEW_CATEGORY_ID_KEY], test_data[test_data_keys.ANIMAL_NAME_2_KEY])
+    response = api_requests.update_category(test_data[test_data_keys.NEW_CATEGORY_ID_KEY], test_data[
+        test_data_keys.ANIMAL_NAME_2_KEY])
     assert response.status_code == requests.codes.ok
 
     category_schema = FileUtils.read_json(file_paths.CATEGORY_SCHEMA_PATH)
@@ -59,12 +58,14 @@ def test_update_category():
 
 
 def test_update_category_false_id():
-    response = api_requests.update_category(test_data[test_data_keys.FALSE_CATEGORY_ID_KEY], test_data[test_data_keys.ANIMAL_NAME_2_KEY])
+    response = api_requests.update_category(test_data[test_data_keys.FALSE_CATEGORY_ID_KEY], test_data[
+        test_data_keys.ANIMAL_NAME_2_KEY])
     assert response.status_code == requests.codes.not_found
 
 
 def test_update_category_existing_name():
-    response = api_requests.update_category(test_data[test_data_keys.NEW_CATEGORY_ID_KEY], test_data[test_data_keys.EXISTING_CATEGORY_NAME_KEY])
+    response = api_requests.update_category(test_data[test_data_keys.NEW_CATEGORY_ID_KEY], test_data[
+        test_data_keys.EXISTING_CATEGORY_NAME_KEY])
     assert response.status_code == requests.codes.internal_server_error
 
 
@@ -156,7 +157,7 @@ def test_update_pet():
 
     assert response.json()[json_keys.NAME] == test_data[test_data_keys.PET_NAME_2_KEY]
     assert response.json()[json_keys.PHOTO_URL] == test_data[test_data_keys.PET_PHOTO_URL_2_KEY]
-    assert response.json()[json_keys.CATEGORY][json_keys.NAME]== test_data[test_data_keys.PET_CATEGORY_NAME_2_KEY]
+    assert response.json()[json_keys.CATEGORY][json_keys.NAME] == test_data[test_data_keys.PET_CATEGORY_NAME_2_KEY]
     assert response.json()[json_keys.STATUS] == test_data[test_data_keys.PET_STATUS_2_KEY]
 
 
