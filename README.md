@@ -21,6 +21,7 @@
 pytest --html=report.html --alluredir=allure-results PetsDemoProject.py
 ```
 **5. Посмотреть отчет pytest-html -> открыть файл report.html** 
+
 **6. Посмотреть отчет Allure -> набрать в командной строке:**
 ```
 allure serve allure-results
