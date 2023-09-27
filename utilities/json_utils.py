@@ -1,4 +1,3 @@
-import json
 import jsonschema
 from jsonschema import validate
 import logging
